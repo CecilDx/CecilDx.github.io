@@ -1,0 +1,30 @@
+{
+  "id": "4689731",
+  "name": "selfprofile",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "9454703",
+      "name": "小红书",
+      "font_class": "xiaohongshu",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "4552970",
+      "name": "邮箱",
+      "font_class": "youxiang",
+      "unicode": "e908",
+      "unicode_decimal": 59656
+    },
+    {
+      "icon_id": "11968736",
+      "name": "github",
+      "font_class": "github",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    }
+  ]
+}
