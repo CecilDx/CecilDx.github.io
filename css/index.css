@@ -84,7 +84,7 @@ body{
     width: calc(100vw - 13vw);
     display: flex;
     flex-direction: column;
-    background: url(../images/bgjpg.png);
+    background: url(../images/preface_bg.png);
     background-position: 0 10vw;
     background-repeat: no-repeat;
     background-size: contain;
@@ -420,62 +420,107 @@ body{
 .working{
     padding: 12vh 4vw 5vh 5vw;
 }
+.work-container{
+    background: #141414;
+    width: 60vw;
+    border-radius: 1vw;
+    padding: 3vh 2vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
 .work-titles{
     height: 6vh;
     margin-bottom: 5vh;
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
 }
 .work-titles div{
     position: relative;
-    font-weight: bold;
-    font-size: 2.5vw;
-    left: 22vw;
+    z-index: 2;
 }
-.work-titles div::after{
+.work-titles::after{
     content: 'JOBS';
     position: absolute;
     font-weight: bold;
     color: #43e2f08a;
     font-size: 2.5vw;
-    right: 58vw;
-    bottom: 2vh;
-    z-index: -1;
+    right: 39vw;
+    transform: translateY(-3vh);
+    z-index: 0;
 }
 .work-content{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 }
 .job{
-    width: 60vw;
     box-sizing: border-box;
-}
-.work-outline{
     display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid #55a5bb;
-    padding-bottom: 1vh;
+    justify-content: start;
+    width: 100%;
+    height: 30vh;
 }
-.work-outline:first-child{
-    margin-bottom: 3vh;
+.job1 .work-outline{
+    width: 30vh;
+    background-image: url(../images/editor.jpg);
+    background-size: 30vh 30vh;
+    background-repeat: no-repeat;
+    background-position: left;
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
 }
-.work-outline li{
-    display: flex;
-    align-items: flex-end;
-}
-.work-outline li:first-child{
-    font-weight: bold;
-    font-size: 1.2vw;
+.job2 .work-outline{
+    width: 30vh;
+    background-image: url(../images/words.jpg);
+    background-size: 30vh 30vh;
+    background-repeat: no-repeat;
+    background-position: left;
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
 }
 .work-introduction{
+    width: calc(100% - 30vh);
+    border-top-right-radius: 1vw;
+    border: 2px solid rgb(50, 50, 50);
+    border-left: 0;
+    border-bottom-right-radius: 1vw;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
+    padding: 2vh 2vw 2vh 1vw;
 }
-.work-introduction li{
-    margin-bottom: 2vh;
+.work-introduction ul:first-child{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-.work-introduction li:last-child{
-    margin-bottom: 5vh;
+.work-introduction ul:first-child li{
+    line-height: 2.5vh;
+    width: 50%;
+    align-items: flex-start;
 }
+.work-introduction ul:first-child li:first-child{
+    font-size: 1.3vw;
+    font-weight: bold;
+}
+.work-introduction ul:first-child :nth-child(2 of li){
+    text-align: right;
+    opacity: 0.8;
+}
+.work-introduction ul:first-child li:last-child{
+    margin-top: 1.5vh;
+    opacity: 0.8;
+}
+.work-introduction ul:last-child li{
+    line-height: 2.5vh;
+    opacity: 0.9;
+}
+.job1{
+    margin-bottom: 6vh;
+}
+
 /* #endregion 工作经历 */
 /* #region 科研经历 */
 .research{
