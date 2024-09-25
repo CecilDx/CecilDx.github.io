@@ -4,6 +4,7 @@ html{
     width: 100vw;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    font-size: 0.9vw;
 }
 body{
     background: black;
@@ -19,6 +20,11 @@ body{
     border-radius: 6px;
     background: #ecececd3;
     transform: translateY(-2px);
+}
+/* 页面分割块 */
+.separation{
+    height: 20vh;
+    width: 100%;
 }
 /* #region 侧边栏 */
 .left-menu-main{
@@ -101,12 +107,13 @@ body{
 }
 .func1, .func2{
     width: 5vw;
-    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     line-height: 3vh;
     border: 2px solid #55a5bb;
     border-radius: 2vw;
     cursor: pointer;
-    font-size: 1vw;
 }
 .func2{
     margin-left: 2vw;
@@ -128,13 +135,7 @@ body{
     box-sizing: border-box;
 }
 .preface{
-    height: calc(100vh - 10vh);
     display: flex;
-}
-.preface-left{
-    width: calc(60vw - 14vw);
-}
-.preface-title{
     margin-top: 20vh;
 }
 .preface-title span{
@@ -171,161 +172,152 @@ body{
     justify-content: center;
 }
 .preface-right-img{
+    min-width: 200px;
+    min-height: 275px;
+    max-width: 350px;
+    max-height: 520px;
     width: 20vw;
     height: 55vh;
     background: url(../images/self_photo.png), linear-gradient(0deg, #1fa4ae24, #1fa4ae);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
-    margin-bottom: 10vh;
     border-radius: 5vw;
 }
 /* #endregion 首页区 */
 /* #region 教育经历 */
 .education{
-    padding: 50px 80px 50px 100px;
+    padding: 12vh 4vw 5vh 5vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 100px;
 }
 .edu-titles{
-    height: 60px;
-    width: 100%;
-    margin: 60px 0 30px 0;
+    height: 6vh;
+    margin-bottom: 8vh;
 }
 .edu-titles div{
     position: relative;
     font-weight: bold;
-    font-size: 40px;
-    transform: translateX(400px);
+    font-size: 2.5vw;
+    left: 22vw;
 }
 .edu-titles div::after{
     content: 'Education';
     position: absolute;
     font-weight: bold;
     color: #43e2f08a;
-    font-size: 40px;
-    transform: translate(-95px, -15px);
+    font-size: 2.5vw;
+    right: 54vw;
+    bottom: 2vh;
     z-index: -1;
 }
 .education-items{
     width: 60vw;
     display: flex;
-    padding-top: 20px;
-    margin-bottom: 5vh;
+    padding: 2vh 0 5vh;
 }
 .item2, .item3{
     border-top: 2px dashed #15e1d3;
 }
 .education-items .num{
     width: 15%;
-    height: 100%;
-    font-size: 30px;
+    font-size: 2vw;
     font-weight: bold;
 }
 .education-items .university{
     width: 30%;
-    height: 100%;
     display: flex;
     flex-direction: column;
 }
 .education-items .university span:first-child{
-    font-size: 16px;
-    height: 30px;
-    line-height: 30px;
+    height: 3vh;
+    line-height: 3vh;
 }
 .education-items .university span:last-child{
-    font-size: 26px;
+    font-size: 1.5vw;
     font-weight: bold;
 }
 .education-items .experience{
     width: calc(100% - 15% - 30%);
-    margin-left: 50px;
-    height: 100%;
-    line-height: 25px;
+    margin-left: 3vw;
+    line-height: 2.5vh;
 }
 /* #endregion 教育经历 */
+:nth-child(2 of div.separation){
+    background: url(../images/njuxx.png);
+    background-repeat: no-repeat;
+    background-position: -2vw -4vh;
+    background-size: 75vw;    
+}
 /* #region 技术栈 */
 .skills{
-    margin-bottom: 10vh;
-    margin-left: 200px;
+    padding: 12vh 4vw 5vh 5vw;
     background: url(../images/skill_bg.png);
-    background-position: -15vw -25vh;
+    background-position: -10vw -5vh;
     background-repeat: no-repeat;
     background-size: 90vw;
 }
 .titles{
-    height: 60px;
-    width: 100%;
-    margin: 60px 0 30px 0;
+    height: 6vh;
+    margin-bottom: 8vh;
 }
 .titles div{
     position: relative;
     font-weight: bold;
-    font-size: 40px;
-    transform: translateX(400px);
+    font-size: 2.5vw;
+    left: 22vw;
 }
 .titles div::after{
     content: 'SKILLS';
     position: absolute;
     font-weight: bold;
     color: #43e2f08a;
-    font-size: 40px;
-    transform: translate(-55px, -15px);
+    font-size: 2.5vw;
+    right: 59vw;
+    bottom: 2vh;
     z-index: -1;
 }
 .skills-content{
     margin-left: 10vw;
     width: 50%;
-    display: flex;
-    flex-direction: column;
 }
 .skills-content ul{
     display: flex;
     text-align: center;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.1vw;
     justify-content: center;
     flex-wrap: wrap;
     align-content: flex-start;
 }
 .skills-content ul li{
-    height: 50px;
-    line-height: 50px;
-    padding: 0 20px;
+    padding: 2vh 2vw;
     background: linear-gradient(90deg, #172c6d, #2791a2);
-    border-radius: 100px;
-    margin: 0 30px 30px 0;
+    border-radius: 5vw;
+    margin: 0 3vw 3vh 0;
 }
 /* #endregion 技术栈 */
 /* #region 项目进度 */
 .prog-titles{
-    height: 60px;
-    width: 100%;
+    height: 6vh;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 2vw;
     padding: 5vh 5vw;
 }
 .prog-titles div{
     position: relative;
     z-index: 2;
 }
-.prog-titles div::after{
+.prog-titles::after{
     content: 'PROGRAME';
     position: absolute;
     font-weight: bold;
     color: #43e2f08a;
-    font-size: 40px;
-    top: 3vh;
-    left: 9vh;
+    font-size: 2vw;
+    top: 7vh;
+    left: 17vh;
     z-index: 0;
-}
-.program{
-    margin-bottom: 100px;
-}
-.prog-container{
-    margin-left: 200px;
 }
 .prog-container-header{
     width: 65vw;
@@ -368,7 +360,7 @@ body{
     width: 50vw;
     height: 15vh;
     background: #95b567;
-    left: 84%;
+    left: 79%;
     top: 0;
     position: absolute;
 }
@@ -378,7 +370,7 @@ body{
     height: 35vh;
     width: 25vw;
     border-radius: 5vh;
-    margin-right: 50px;
+    margin-right: 2vw;
     border: 2px dashed #15e1d3;
     padding: 2vh 1vw;
     box-sizing: border-box;
@@ -386,77 +378,77 @@ body{
 }
 .prog-item1{
     background: url(../images/TOPMUR.png);
-    background-size: 100%;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 .prog-item2{
     background: url(../images/self_index.png);
-    background-size: 100%;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 .prog-outline span{
     font-weight: bold;
 }
-.prog-item1 div{
-    height: 8%;
-    width: 95%;
-    background: linear-gradient(90deg, #1fa4ae 40%, #ecececd3 40%);
-    border-radius: 20px;
+.prog-outline div{
+    border-radius: 2vh;
     margin-bottom: 1vh;
+    display: flex;
+    align-items: center;
+    height: 2vh;
+    width: 95%;
+}
+.prog-item1 div{
+    background: linear-gradient(90deg, #1fa4ae 40%, #ecececd3 40%);
 }
 .prog-item1 div::after{
     content: '40%';
     position: absolute;
-    transform: translateX(10px);
     color: white;
+    left: 7vw;
 }
 .prog-item2 div{
-    height: 8%;
-    width: 95%;
     background: linear-gradient(90deg, #1fa4ae 60%, #ecececd3 60%);
-    border-radius: 20px;
-    margin-bottom: 1vh;
 }
 .prog-item2 div::after{
     content: '60%';
     position: absolute;
-    transform: translateX(10px);
+    left: 34vw;
     color: white;
 }
 /* #endregion 项目进度 */
 /* #region 工作经历 */
 .working{
-    margin-bottom: 15vh;
+    padding: 12vh 4vw 5vh 5vw;
 }
 .work-titles{
-    height: 60px;
-    width: 100%;
-    margin: 60px 0 30px 0;
+    height: 6vh;
+    margin-bottom: 5vh;
 }
 .work-titles div{
     position: relative;
     font-weight: bold;
-    font-size: 40px;
-    letter-spacing: 2px;
-    transform: translateX(600px);
+    font-size: 2.5vw;
+    left: 22vw;
 }
 .work-titles div::after{
     content: 'JOBS';
     position: absolute;
     font-weight: bold;
     color: #43e2f08a;
-    font-size: 40px;
-    transform: translate(-55px, -15px);
+    font-size: 2.5vw;
+    right: 58vw;
+    bottom: 2vh;
     z-index: -1;
 }
 .work-content{
     display: flex;
-    margin-left: 200px;
     flex-direction: column;
 }
-.work-outline{
+.job{
     width: 60vw;
     box-sizing: border-box;
+}
+.work-outline{
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid #55a5bb;
@@ -471,11 +463,9 @@ body{
 }
 .work-outline li:first-child{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.2vw;
 }
 .work-introduction{
-    width: 60vw;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -489,27 +479,28 @@ body{
 /* #endregion 工作经历 */
 /* #region 科研经历 */
 .research{
-    margin-left: 200px;
+    padding: 12vh 4vw 5vh 5vw;
     background: url(../images/research-bg.png);
     background-repeat: no-repeat;
+    background-position: 3vw 9vh;
+    background-size: 65vw;
 }
 .research-title::after{
     content: 'RESEARCH';
     position: absolute;
     font-weight: bold;
     color: #43e2f08a;
-    font-size: 40px;
-    transform: translate(-100px, -15px);
+    font-size: 2.5vw;
+    right: 54vw;
+    bottom: 2vh;
     z-index: -1;
 }
 .research-title{
     position: relative;
     font-weight: bold;
-    font-size: 40px;
-    letter-spacing: 2px;
-    transform: translateX(300px);
+    font-size: 2.5vw;
+    left: 22vw;
     margin-bottom: 8vh;
-    padding-left: 100px;
 }
 .research-items{
     display: flex;
@@ -521,13 +512,15 @@ body{
     padding: 2vh 2vw;
     box-sizing: border-box;
     border: 2px solid #15e1d3;
-    border-radius: 40px;
+    border-radius: 2vw;
     display: flex;
     flex-direction: column;
     width: 28vw;
 }
 .research-item{
     margin-right: 5vw;
+}
+:nth-child(odd of div.research-item){
     margin-bottom: 8vh;
 }
 .research-item-top{
@@ -542,17 +535,14 @@ body{
 .research-item-top span:first-child{
     display: block;
     width: 100%;
-    font-size: 20px;
+    font-size: 1.2vw;
     font-weight: bold;
 }
 .research-item-top .bottomline{
-    margin-top: 10px;
+    margin-top: 1vh;
     width: 100%;
-    height: 2px;
+    height: 0.2vh;
     background: #ecececd3;
-}
-.research-item-top>span{
-    font-size: 14px;
 }
 .research-item-top span:nth-child(3){
     display: block;
@@ -560,13 +550,13 @@ body{
     text-align: left;
 }
 .research-item-top span:nth-child(3), .research-item-top span:nth-child(4){
-    margin-top: 10px;
+    margin-top: 1vh;
 }
 .research-item-top span:nth-child(4){
     text-align: right;
 }
 .research-item-top span:nth-child(5), .research-item-top span:nth-child(6){
-    margin-top: 10px;    
+    margin-top: 1vh;    
 }
 .research-item-top span:nth-child(6){
     text-align: right;
@@ -581,8 +571,8 @@ body{
     text-align: right;
 }
 .research-item-content{
-    margin-top: 30px;
-    line-height: 30px;
+    margin-top: 3vh;
+    line-height: 3vh;
 }
 /* #endregion 科研经历 */
 /* #endregion 右侧内容区 */
@@ -592,33 +582,46 @@ body{
     width: 78vw;
     background: linear-gradient(149deg, #3fc2e9cc, #332f71c4 70%);
     border-top-left-radius: 5vw;
-    margin-left: calc(100vw - 88vw);
+    margin-left: 5vw;
     display: flex;
     flex-direction: column;
     padding: 5vh 5vw;
     box-sizing: border-box;
 }
+.contact-top{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.backtofirst{
+    font-size: 0.7vw;
+    box-sizing: border-box;
+    background: #b5b5b53b;
+    border-radius: 5vw;
+    padding: 1vh 1vw;
+}
 .contact-title{
-    font-size: 36px;
+    font-size: 2vw;
     font-weight: bold;
-    margin-bottom: 3vh;
 }
 .contact ul{
     display: flex;
     justify-content: start;
     align-items: end;
     height: 15vh;
+    margin-top: 10vh;
 }
 .contact ul li{
     margin-right: 5vw;
 }
 .contact ul li div:first-child{
-    font-size: 24px;
+    font-size: 1.5vw;
     margin-bottom: 1vh;
 }
 .contact span{
     margin-top: 4vh;
     text-align: left;
-    font-size: 12px;
+    font-size: 0.7vw;
 }
 /* #endregion contact */
