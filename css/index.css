@@ -501,6 +501,9 @@ body{
     width: 50%;
     align-items: flex-start;
 }
+.work-introduction ul:first-child li:last-child{
+    width: 100%;
+}
 .work-introduction ul:first-child li:first-child{
     font-size: 1.3vw;
     font-weight: bold;
