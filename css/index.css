@@ -370,7 +370,6 @@ body{
     height: 35vh;
     width: 25vw;
     border-radius: 5vh;
-    margin-right: 2vw;
     border: 2px dashed #15e1d3;
     padding: 2vh 1vw;
     box-sizing: border-box;
@@ -380,6 +379,7 @@ body{
     background: url(../images/TOPMUR.png);
     background-size: contain;
     background-repeat: no-repeat;
+    margin-right: 10vw;
 }
 .prog-item2{
     background: url(../images/self_index.png);
@@ -412,7 +412,7 @@ body{
 .prog-item2 div::after{
     content: '60%';
     position: absolute;
-    left: 34vw;
+    left: 42vw;
     color: white;
 }
 /* #endregion 项目进度 */
